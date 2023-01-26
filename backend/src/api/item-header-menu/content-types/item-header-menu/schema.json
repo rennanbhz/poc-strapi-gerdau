@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "item_header_menus",
+  "info": {
+    "singularName": "item-header-menu",
+    "pluralName": "item-header-menus",
+    "displayName": "ItemHeaderMenu"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Label": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Tipo": {
+      "type": "enumeration",
+      "enum": [
+        "Link",
+        "Modal",
+        "Filtro"
+      ],
+      "required": true,
+      "default": "Link"
+    },
+    "AncoraURL": {
+      "type": "string"
+    },
+    "TextoModal": {
+      "type": "richtext"
+    },
+    "Filtro": {
+      "type": "json"
+    }
+  }
+}

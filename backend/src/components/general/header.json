@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_general_headers",
+  "info": {
+    "displayName": "Header"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "Acao": {
+      "type": "enumeration",
+      "enum": [
+        "Abrir Modal",
+        "Redirecionar",
+        "Filtrar"
+      ]
+    },
+    "Ancora": {
+      "type": "string"
+    },
+    "ConteudoModal": {
+      "type": "richtext"
+    },
+    "Filtro": {
+      "type": "json"
+    }
+  }
+}
