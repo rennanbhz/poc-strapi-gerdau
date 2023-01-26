@@ -30,6 +30,11 @@
     },
     "Descricao": {
       "type": "text"
+    },
+    "Slug": {
+      "type": "uid",
+      "targetField": "Nome",
+      "required": true
     }
   }
 }

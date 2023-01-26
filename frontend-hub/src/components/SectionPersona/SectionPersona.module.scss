@@ -1,0 +1,23 @@
+.sectionPersona {
+  width: 100%;
+  background-color: white;
+  padding: 48px 65px;
+
+  > &__container {
+    width: fit-content;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin: 0 auto;
+  }
+
+  &__loading {
+    padding: 48px 65px;
+    text-align: center;
+
+    h2 {
+      color: #212529;
+    }
+  }
+}

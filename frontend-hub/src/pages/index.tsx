@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import { useEffect, useState } from 'react'
+import SectionPersona from "@/components/SectionPersona/SectionPersona";
 
 const inter = Inter({ subsets: ['latin'] })
 const HOST = 'http://localhost:1337';
@@ -12,7 +13,7 @@ export default function Home() {
   const [itemsHeader, setItemsHeader] = useState<any>(null);
 
   useEffect(() => {
-    fetch(`${HOST}/api/personas`)
+    fetch(`${HOST}/api/personas?populate=*`)
       .then(response => response.json())
       .then(body => setContent(body));
 
@@ -30,15 +31,12 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
+      <main>
         <h1>Header</h1>
         <pre>{
           JSON.stringify(itemsHeader, null, 4)
         }</pre>
-        <h1>Personas</h1>
-        <pre>{
-          JSON.stringify(content, null, 4)
-        }</pre>
+        <SectionPersona/>
       </main>
     </>
   )
