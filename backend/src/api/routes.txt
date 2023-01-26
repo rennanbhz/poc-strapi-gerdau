@@ -1,0 +1,20 @@
+http://localhost:1337/api/arquitetos
+
+http://localhost:1337/api/autoconstrutors
+
+http://localhost:1337/api/engenheiros
+
+http://localhost:1337/api/lojistas
+
+http://localhost:1337/api/pedreiros
+
+http://localhost:1337/api/serralheiros
+
+
+Backup Database from Docker:
+
+docker exec -t <your-db-container> pg_dumpall -c -U postgres > dump_`date +%d-%m-%Y"_"%H_%M_%S`.sql
+
+Restore Database in Docker:
+
+cat your_dump.sql | docker exec -i <your-db-container> psql -U postgres
