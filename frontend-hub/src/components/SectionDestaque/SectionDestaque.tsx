@@ -2,8 +2,6 @@ import {useEffect, useState} from "react";
 import styles from "./SectionDestaque.module.scss";
 import {ImageObject} from "@/interfaces/ImageObject";
 import Image from "next/image";
-import type { NextRequest } from 'next/server'
-import { NextResponse } from 'next/server'
 
 export interface Destaque {
     id: number

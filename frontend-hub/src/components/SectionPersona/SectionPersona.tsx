@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import styles from "./SectionPersona.module.scss";
-import CardPersona, {Persona} from "@/components/CardPersona/CardPersona";
+import CardPersona from "@/components/CardPersona/CardPersona";
+import Persona from "@/interfaces/Persona";
 
 const HOST = 'http://localhost:1337';
 export default function SectionPersona() {

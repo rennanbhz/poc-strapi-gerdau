@@ -21,8 +21,7 @@
       "type": "enumeration",
       "enum": [
         "Link",
-        "Modal",
-        "Filtro"
+        "Logo"
       ],
       "required": true,
       "default": "Link"
@@ -30,11 +29,16 @@
     "AncoraURL": {
       "type": "string"
     },
-    "TextoModal": {
-      "type": "richtext"
-    },
-    "Filtro": {
-      "type": "json"
+    "ImagemDoLogo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   }
 }

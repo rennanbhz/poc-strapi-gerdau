@@ -1,22 +1,21 @@
 {
   "collectionName": "components_shared_shared_images",
   "info": {
-    "displayName": "sharedImage"
+    "displayName": "sharedImage",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "media": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
-    },
-    "alt": {
-      "type": "string"
+      ]
     }
   }
 }
