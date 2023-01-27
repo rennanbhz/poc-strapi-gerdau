@@ -30,12 +30,6 @@ export default function SectionDestaque(request: NextRequest) {
             .then(body => setContent(body?.data || []));
     }, []);
 
-    const routeChange = (stringUrl: string) =>{
-        const url = request.nextUrl.clone()
-        url.pathname = stringUrl
-        return NextResponse.redirect(url)   
-    }
-
     if (!content || content.length == 0)
         return (
             <section className={styles.sectionDestaque__loading}>
