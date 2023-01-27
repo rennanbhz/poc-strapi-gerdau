@@ -21,7 +21,7 @@ export interface Destaque {
 }
 
 const HOST = 'http://localhost:1337';
-export default function SectionDestaque(request: NextRequest) {
+export default function SectionDestaque() {
     const [content, setContent] = useState<Destaque[]>([]);
 
     useEffect(() => {

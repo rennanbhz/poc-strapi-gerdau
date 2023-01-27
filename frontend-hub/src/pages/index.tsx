@@ -10,20 +10,6 @@ const inter = Inter({ subsets: ['latin'] })
 const HOST = 'http://localhost:1337';
 
 export default function Home() {
-  const [content, setContent] = useState<any>(null);
-  const [itemsHeader, setItemsHeader] = useState<any>(null);
-
-  useEffect(() => {
-    fetch(`${HOST}/api/personas?populate=*`)
-      .then(response => response.json())
-      .then(body => setContent(body));
-
-    fetch(`${HOST}/api/destaques?populate=*`)
-      .then(res => res.json())
-      .then(body => setItemsHeader(body));
-  }, []);
-
-
   return (
     <>
       <Head>

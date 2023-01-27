@@ -4,7 +4,8 @@
   "info": {
     "singularName": "item-header-menu",
     "pluralName": "item-header-menus",
-    "displayName": "ItemHeaderMenu"
+    "displayName": "ItemHeaderMenu",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
