@@ -40,11 +40,17 @@ export default function SectionPersonaPosts(
 
     return <section className={styles.sectionPersonaPost}>
         <h1 className={[styles.sectionPersonaPost__title, AeonikFono.className].join(' ')}>{title}</h1>
-        <div className={styles.sectionPersonaPost__filter}/>
+        {posts.length > 0 && <div className={styles.sectionPersonaPost__filter}/>}
         <hr className={styles.sectionPersonaPost__divisor}/>
-        <div className={styles.sectionPersonaPost__cardsContainer}>
-            {posts.map(post =>
-                <CardPost key={`card-post-${post.id}`} post={post}/>)}
-        </div>
+        {
+            posts.length
+                ? <div className={styles.sectionPersonaPost__cardsContainer}>
+                    {posts.map(post =>
+                        <CardPost key={`card-post-${post.id}`} post={post}/>)}
+                </div>
+                : <h2 className={styles.sectionPersonaPost__warning}>
+                    Não há posts para este contexto.
+                </h2>
+        }
     </section>;
 }

@@ -9,6 +9,13 @@
     font-size: 36px;
   }
 
+  > &__warning {
+    padding: 1rem;
+    border: 1px solid #495057F5;
+    border-radius: .3rem;
+    text-align: center;
+  }
+
   &__title {
     font-size: 40px;
     font-weight: 400;
