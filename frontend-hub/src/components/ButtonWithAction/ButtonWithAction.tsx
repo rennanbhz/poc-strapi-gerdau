@@ -1,4 +1,6 @@
+import { ImageObject } from "@/interfaces/ImageObject";
 import styles from "./ButtonWithAction.module.scss";
+import Image from "next/image";
 
 export interface Button {
     id: number
