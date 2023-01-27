@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_artigos_artigos_relacionados",
+  "info": {
+    "displayName": "artigosRelacionados",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "intro": {
+      "type": "string"
+    },
+    "artigos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::artigo.artigo"
+    }
+  }
+}

@@ -35,6 +35,14 @@
       "type": "uid",
       "targetField": "Nome",
       "required": true
+    },
+    "preventIndexing": {
+      "type": "boolean",
+      "default": false
+    },
+    "keywords": {
+      "type": "string",
+      "required": true
     }
   }
 }
