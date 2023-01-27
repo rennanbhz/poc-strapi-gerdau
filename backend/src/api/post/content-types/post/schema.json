@@ -4,7 +4,8 @@
   "info": {
     "singularName": "post",
     "pluralName": "posts",
-    "displayName": "Post"
+    "displayName": "Post",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,23 +17,45 @@
       "required": true,
       "unique": true
     },
-    "Conteudo": {
-      "type": "richtext"
-    },
-    "personas": {
+    "Personas": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::persona.persona"
     },
     "Thumbnail": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
       "type": "media",
-      "multiple": false
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Tipo": {
+      "type": "enumeration",
+      "enum": [
+        "Vídeos",
+        "Artigos",
+        "Manuais",
+        "Calculadoras"
+      ],
+      "required": true,
+      "default": "Artigos"
+    },
+    "Slug": {
+      "type": "uid",
+      "targetField": "Titulo",
+      "required": true
+    },
+    "Arquivos": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "files"
+      ]
+    },
+    "ConteudoPost": {
+      "type": "richtext"
     }
   }
 }
