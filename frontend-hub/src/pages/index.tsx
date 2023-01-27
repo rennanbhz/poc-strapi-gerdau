@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import { useEffect, useState } from 'react'
+import SectionDestaque from "@/components/SectionDestaque/SectionDestaque";
 import SectionPersona from "@/components/SectionPersona/SectionPersona";
 
 const inter = Inter({ subsets: ['latin'] })
@@ -17,7 +18,7 @@ export default function Home() {
       .then(response => response.json())
       .then(body => setContent(body));
 
-    fetch(`${HOST}/api/item-header-menus`)
+    fetch(`${HOST}/api/destaques?populate=*`)
       .then(res => res.json())
       .then(body => setItemsHeader(body));
   }, []);
@@ -32,10 +33,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h1>Header</h1>
-        <pre>{
-          JSON.stringify(itemsHeader, null, 4)
-        }</pre>
+        <SectionDestaque/>
         <SectionPersona/>
       </main>
     </>

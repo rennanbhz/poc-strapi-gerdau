@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "destaques",
+  "info": {
+    "singularName": "destaque",
+    "pluralName": "destaques",
+    "displayName": "Destaque",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "TextoDeDestaque": {
+      "type": "string",
+      "required": true
+    },
+    "Imagem": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "LabelBotao": {
+      "type": "string"
+    },
+    "UrlBotao": {
+      "type": "string"
+    },
+    "post": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::post.post"
+    },
+    "Descricao": {
+      "type": "richtext",
+      "maxLength": 500
+    }
+  }
+}
