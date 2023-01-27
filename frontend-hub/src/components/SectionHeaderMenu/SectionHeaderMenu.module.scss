@@ -6,10 +6,8 @@
   padding: 39px 65px;
 
   > &__container {
-    width: fit-content;
-    display: grid;
-    justify-content: center;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    text-align: left;
     gap: 40px;
     margin: 0 auto;
   }
