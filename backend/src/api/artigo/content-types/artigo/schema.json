@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "artigos",
+  "info": {
+    "singularName": "artigo",
+    "pluralName": "artigos",
+    "displayName": "Artigo",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "SEO": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.seo"
+    },
+    "preventIndexing": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "keywords": {
+      "type": "string",
+      "required": true
+    },
+    "structuredData": {
+      "type": "json"
+    },
+    "artigosRelacionados": {
+      "type": "component",
+      "repeatable": false,
+      "component": "artigos.artigos-relacionados"
+    }
+  }
+}
