@@ -2,14 +2,15 @@ import {useRouter} from "next/router";
 import {useEffect, useState} from "react";
 import Persona from "@/interfaces/Persona";
 import HeaderPage from "@/components/HeaderPage/HeaderPage";
+import SectionPersonaPosts from "@/components/SectionPersonaPosts/SectionPersonaPosts";
 
 const HOST = 'http://localhost:1337';
 
 export default function PersonaBySlug() {
-    const router = useRouter()
+    const router = useRouter();
     const {slug = ''} = router.query;
 
-    const [persona, setPersona] = useState<Persona | null>(null);
+    const [persona, setPersona] = useState<Persona>();
     const [loading, setLoading] = useState<boolean>(true);
 
     useEffect(() => {
@@ -26,14 +27,15 @@ export default function PersonaBySlug() {
                     await router.push('/404')
                 }
             });
-    }, [slug]);
+    }, [router, slug]);
 
     if (loading)
-        return <main>
+        return <>
             {slug} Carregando...
-        </main>
-    return <main>
+        </>
+    return <>
         <HeaderPage title={`Com você, ${persona?.attributes?.Nome}`}/>
-        {slug}
-    </main>
+        <SectionPersonaPosts title={'Vamos construir sua melhor obra'}
+                             personaId={persona?.id as number}/>
+    </>
 }

@@ -30,17 +30,6 @@
         "images"
       ]
     },
-    "Tipo": {
-      "type": "enumeration",
-      "enum": [
-        "Vídeos",
-        "Artigos",
-        "Manuais",
-        "Calculadoras"
-      ],
-      "required": true,
-      "default": "Artigos"
-    },
     "Slug": {
       "type": "uid",
       "targetField": "Titulo",
@@ -56,6 +45,11 @@
     },
     "ConteudoPost": {
       "type": "richtext"
+    },
+    "TipoPost": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::post-type.post-type"
     }
   }
 }
